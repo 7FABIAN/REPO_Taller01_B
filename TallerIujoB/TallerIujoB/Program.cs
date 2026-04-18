@@ -10,7 +10,7 @@ namespace TallerCsharp_Ian {
 
             // --- DESAFÍO 1: EL VALIDADOR DE SEGURIDAD ---
             Console.WriteLine("Ejecutando Desafío 1...");
-            string datosEntrada = "ian_usuario;clave123"; 
+            string datosEntrada = "fabian_usuario;clave123"; 
             string[] partes = datosEntrada.Split(';');
 
             if (partes.Length >= 2 && partes[1].Contains("123")) {
@@ -58,5 +58,5 @@ namespace TallerCsharp_Ian {
             Console.WriteLine("\n=== TODO CORRECTO. Presiona una tecla para salir ===");
             Console.ReadKey();
         }
-    }
+	}
 }
