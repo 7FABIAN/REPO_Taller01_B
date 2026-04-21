@@ -2,13 +2,13 @@
 using System.IO;
 using System.Text;
 
-namespace TallerCsharp_Ian {
+namespace TallerCsharpfabian {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine("=== TALLER IUJO: GESTIÓN DE ARCHIVOS ===");
-            Console.WriteLine("Estudiante: ian\n");
+            Console.WriteLine("TALLER IUJO: GESTIÓN DE ARCHIVOS");
 
-            // --- DESAFÍO 1: EL VALIDADOR DE SEGURIDAD ---
+
+            // desafio 1
             Console.WriteLine("Ejecutando Desafío 1...");
             string datosEntrada = "fabian_usuario;clave123"; 
             string[] partes = datosEntrada.Split(';');
@@ -20,12 +20,12 @@ namespace TallerCsharp_Ian {
                 Console.WriteLine("> Registro de seguridad creado.");
             }
 
-            // --- DESAFÍO 2: EL CLONADOR DE IMÁGENES ---
+            // desafio 2
             Console.WriteLine("\nEjecutando Desafío 2...");
             string fotoOriginal = "avatar.jpg";
             string fotoCopia = "respaldo.jpg";
 
-            // Creamos un archivo falso para que el código no falle si no tienes la imagen
+           
             if (!File.Exists(fotoOriginal)) {
                 File.WriteAllText(fotoOriginal, "simulacion de bytes de imagen");
             }
@@ -40,7 +40,7 @@ namespace TallerCsharp_Ian {
             }
             Console.WriteLine("> Clonación byte a byte terminada.");
 
-            // --- DESAFÍO 3: EL BUSCADOR DE ARCHIVOS PESADOS ---
+            // desafio 3
             Console.WriteLine("\nEjecutando Desafío 3...");
             // Buscamos en la carpeta donde se ejecuta el programa
             string rutaActual = AppDomain.CurrentDomain.BaseDirectory;
@@ -51,7 +51,7 @@ namespace TallerCsharp_Ian {
                 // 5KB son 5120 bytes
                 if (info.Length > 5120) {
                     Console.WriteLine("> Archivo pesado encontrado: " + info.Name + " (" + info.Length + " bytes)");
-                    // Para borrarlo realmente usa: info.Delete();
+                    // Para borrarlo  info.Delete();
                 }
             }
 
